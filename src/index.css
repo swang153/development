@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h6{
+  color: #8fabd1;
+}
+
+main {
+  grid-area: main;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.cards-container {
+  width: 60vw;
+}
+.cart-container {
+  width: 30vw; 
+}
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.products li{
+  flex: 1 1 18vw;
+  height: 27vw;
+  padding: 1rem;
+  margin: 1rem;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.product img{
+  max-width: 18vw;
+  max-height: 18vw;
+}
+.product-title {
+  font-size: 150%;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-price div, 
+.product-price button{
+  text-align: center;
+}
+.button {
+  padding: .5rem;
+  border: .1rem #c0c0c0 solid;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.button.primary{
+  background-color: #D8DFE9;
+}
