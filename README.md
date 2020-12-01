@@ -2,10 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Organization of components
-How data is passed down through components
-How the user trigger state changes
-
 # Organization of components
 * Cart.js: This class models the shopping cart which is a list of the products the customer has added to their cart. It also updates the total price of the items in the cart.
 * Filter.js: This class contains the filtering and sorting selectors and calls on the props to pass in the filter/sort that the user selected.
