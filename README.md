@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Development
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Organization of components
+How data is passed down through components
+How the user trigger state changes
 
-In the project directory, you can run:
+# Organization of components
+* Cart.js: This class models the shopping cart which is a list of the products the customer has added to their cart. It also updates the total price of the items in the cart.
+* Filter.js: This class contains the filtering and sorting selectors and calls on the props to pass in the filter/sort that the user selected.
+* Products.js: This class holds all the cards for the products. It uses the map function to reference parts of the json data. 
+* App.js: The control panel that ties together the other components for functionality, described in more depth in the next section. 
 
-### `npm start`
+# How data is passed down through components
+The data is first built within the data.json file. App.js contains a state called "products" and is set equal to the data and includes methods for sorting and filtering that modify the state of the product. It then has reference to Products.js so that appropriate adjustments and can be made to the cards. App.js also has methods to update the aggregated data (cartItems) in the shopping cart as items are added and removed. It then refers to Cart.js to represent these changes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# How the user trigger state changes
+The user can change the state of the products by sorting by price (from lowest to highest or highest to lowest). They can also filter by era (the album) that the item comes from or by type of merch (clothing, accessories, or physical music). Additionally, the user can update the state of the cartItems by adding items to the cart or removing them from the cart. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Bugs 🥺
+There is a small, wonky bug to my program. It can simultaneously sort and filter on first selection of each cateogry (i.e. select era: positions, merch: clothing, sort: lowest to highest). However, before any future filtering selections are made, you must first set the filter to "all" before selecting a new filter. It will then be able to do a new sorting/filtering combo. 
