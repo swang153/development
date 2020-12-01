@@ -1,6 +1,6 @@
 # Development
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). To run locally from the command line, type `npm start` and open up localhost:3000 in your browser.
 
 # Organization of components
 * Cart.js: This class models the shopping cart which is a list of the products the customer has added to their cart. It also updates the total price of the items in the cart.
