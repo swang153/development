@@ -16,6 +16,11 @@ h6{
   color: #8fabd1;
 }
 
+img{
+  max-width: 9vw;
+  max-height: 9vw;
+}
+
 main {
   grid-area: main;
 }
@@ -30,6 +35,7 @@ main {
 .cart-container {
   width: 30vw; 
 }
+/* products */
 .products {
   display: flex;
   justify-content: center;
@@ -68,6 +74,7 @@ main {
 .product-price button{
   text-align: center;
 }
+/* buttons */
 .button {
   padding: .5rem;
   border: .1rem #c0c0c0 solid;
@@ -78,3 +85,36 @@ main {
 .button.primary{
   background-color: #D8DFE9;
 }
+.filter{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+}
+/* cart */
+.cart {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+}
+.cart-items{
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+.cart-items img{
+  max-width: 10vw;
+}
+.cart-items li {
+  display: flex;
+}
+.cart-items li div {
+  padding: 0.5rem;
+}
+.cart-items li div:last-child {
+  flex: 1;
+}
+.right {
+  text-align: right;
+}
+
